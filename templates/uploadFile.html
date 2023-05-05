@@ -1,0 +1,21 @@
+{% extends "PageBase.html" %}
+
+{% block homecontent %}
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <span class="glyphicon glyphicon-th-list" aria-hidden="true" style="margin-right: 5px;"></span>
+        <span>文件上传</span>
+    </div>
+    <div class="panel-body">
+        <form method="post" enctype="multipart/form-data" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <input id="input-b1" name="input-b1" type="file" class="file" data-browse-on-zone-click="true"
+            </div>
+            <input type="submit" class="btn btn-sm btn-info" value="上传">
+        </form>
+    </div>
+</div>
+
+{% endblock %}
